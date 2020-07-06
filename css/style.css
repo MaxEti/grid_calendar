@@ -1,0 +1,82 @@
+/* CSS reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1280px;
+  margin: auto;
+  padding: 0 2rem;
+  background: #f3f3f3;
+  color: #fff;
+  font-family: 'Space Mono', monospace;
+}
+
+header {
+  font-size: 2rem;
+  color: #4f57aa;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+#weekdays {
+  height: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.125rem;
+  height: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.125rem;
+}
+
+.container > div {
+  height: 6.5rem;
+}
+
+#weekdays > div,
+.container > div {
+  background-size: cover;
+  background-attachment: fixed;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  transition: all 0.5s ease-in;
+}
+
+#weekdays > div:hover,
+.container > div:hover {
+  opacity: 0.6;
+  transform: scale(0.98);
+}
+
+.bg1 {
+  background: url('/img/nasa-_SFJhRPzJHs-unsplash.jpg');
+}
+
+.bg2 {
+  background: url('/img/nasa-vltMzn0jqsA-unsplash.jpg');
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    max-width: 500px;
+    margin: auto;
+    padding: 0.5rem 0.5rem;
+  }
+  .container > div {
+    height: 3.5rem;
+  }
+}
